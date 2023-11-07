@@ -1,0 +1,145 @@
+* {
+     margin: 0;
+     padding: 0;
+}
+
+.main {
+     display: flex;
+     height: 100vh;
+}
+
+.btn_one {
+     margin: 1rem;
+}
+
+.btn_two {
+     position: absolute;
+     left: 190px;
+     top: 10px;
+}
+
+.side-nav {
+     width: 15rem;
+     height: 100vh;
+     position: fixed;
+     left: -550px;
+     background-color: rgb(26, 26, 26, 0.9);
+}
+
+.side-nav .web {
+     background-color: rgba(45, 240, 55, 0.7);
+     margin-bottom: 1rem ;
+     border-radius: 1rem 0rem;
+}
+.side-nav a {
+     line-height: 3rem;
+     text-decoration: none;
+     margin: 0rem 1rem;
+     font-size: 1.4rem;
+     color: white;
+}
+
+.content {
+     flex: 1;
+}
+
+.container {
+     height: 24rem;
+     background-color: rgba(30, 223, 104, 0.6);
+     text-align: center;
+     margin: 2rem 17rem;
+     border-radius: 1rem;
+     transition-duration: 0.6s;
+     /* transition-delay: 10ms; */
+     transition-timing-function: ease-in;
+}
+
+.container:hover {
+     box-shadow: 2px 2px 10px black;
+}
+
+.container h1 {
+     font-size: 3rem;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+     margin-top: 2rem;
+     font-family: 'Times New Roman', Times, serif;
+}
+
+.h {
+     margin-bottom: 1rem;
+}
+
+button {
+     height: 2.3rem;
+     padding: 0.5rem;
+     border-radius: 0.5rem;
+     color: white;
+     cursor: pointer;
+     background-color: darkorange;
+     border: 3px solid darkorange;
+     transition-duration: 1s;
+     transition-delay: 20ms;
+     transition-timing-function: ease-in;
+     font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+     color: white;
+     background-color: aqua;
+     border: 3px solid aqua;
+}
+
+#check {
+     display: none;
+}
+
+#check:checked~.side-nav {
+     left: 0;
+}
+
+@media (min-width: 1200px) {
+     .side-nav {
+          width: 15rem;
+          height: 100vh;
+          position: fixed;
+          left: 0px;
+          background-color: rgb(26, 26, 26, 0.2);
+     }
+
+     #check {
+          display: none;
+     }
+
+     .btn_one {
+          display: none;
+     }
+
+     .btn_two {
+          display: none;
+     }
+}
+
+@media (max-width: 1199px) {
+     .btn_one {
+          position: absolute;
+     }
+     .content {
+          position: absolute;
+          top: 4rem;
+     }
+     
+     .container {
+          height: 28rem;
+          background-color: rgba(30, 223, 104, 0.6);
+          text-align: center;
+          margin: 2rem 1rem;
+          border-radius: 1rem;
+          transition-duration: 0.6s;
+          /* transition-delay: 10ms; */
+          transition-timing-function: ease-in;
+     }
+
+}
